@@ -1,4 +1,4 @@
-# Boilerplate
+# Mithril Reddit
 
 ## Start
 ```
