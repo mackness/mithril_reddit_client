@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('app.css'),
     new HtmlWebpackPlugin({
-      template: './src/index.jade'
+      template: './src/index.html'
     }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
@@ -27,7 +27,6 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loaders: ['babel'], exclude: /node_modules/ },
-      { test: /\.jade$/, loader: 'jade' },
       { test: /\.(scss|css)$/, loader: ExtractTextPlugin.extract('style', 'css!sass!postcss') },
       { test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=500000' }
     ]

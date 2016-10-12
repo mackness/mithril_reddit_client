@@ -1,2 +1,65 @@
 @import './variables';
 @import './main';
+
+html {
+	font-family: 'Rubik', sans-serif;
+}
+
+a {
+	width: 100%;
+	display: block;
+}
+
+.nav {
+	width: 100%;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.link,
+.nav a {
+	float: left;
+	width: auto;
+	margin-right: 5px;
+}
+
+.remove {
+	opacity: 0;
+	color: red;
+	cursor: pointer;
+}
+
+.link:hover .remove {
+	opacity: 1;
+}
+
+
+.score {
+	float: left;
+	margin-right: 10px;
+	color: #ED842E;
+}
+
+button {
+	margin-bottom: 10px;
+}
+
+.comment-score {
+	top: 0;
+	left: 0;
+	color: white;
+	padding: 0 3px;
+	background-color: black;
+	position: absolute;
+}
+
+.comment {
+	position: relative;
+	border: solid 1px black;
+	padding: 0 15px;
+	> .comment {
+		margin-left: 10px;
+	}
+}

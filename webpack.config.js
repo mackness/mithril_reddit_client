@@ -14,7 +14,6 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loaders: ['babel'], exclude: /node_modules/ },
-      { test: /\.jade$/, loader: 'jade' },
       { test: /\.(scss|css)$/, loader: 'style!css!sass' },
       { test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=500000' }
     ]
@@ -22,7 +21,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.jade'
+      template: './src/index.html'
     })
   ]
 }
